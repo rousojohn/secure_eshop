@@ -56,20 +56,26 @@
 
 <!--/* PRODUCT LIST */ -->
 		<div class="list-group"></div>
+<div id="modal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content"></div>
+		</div>
+	</div>
+<!--/* SOMETHING LIKE FOOTER (SHOWING TOTAL ITEMS IN CART) */-->
+	<div class="alert alert-success">
+		<p><span id="totalItems"><bold></bold></span> items have been added to your cart.</p>
+	</div>
+<!-- /* END OF FOOTER */-->
         <?php else : ?>
 		<div class="alert alert-danger alert-dismissable">
 		  <button id="dismissBtn" type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-			<p>You are not authorized to access this page. Please Login</p>
+			<p id="errorText">You are not authorized to access this page. Please Login</p>
 		</div>
         <?php endif; ?>
 
 
 <!--/* END OF PRODUCT LIST */ -->
 
-<!--/* SOMETHING LIKE FOOTER (SHOWING TOTAL ITEMS IN CART) */-->
-	<div class="alert alert-success">
-		<p><span id="totalItems"><bold></bold></span> items have been added to your cart.</p>
-	</div>
-<!-- /* END OF FOOTER */-->
+
     </body>
 </html>

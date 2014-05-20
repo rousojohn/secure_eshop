@@ -213,3 +213,9 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+*.htaccess
+*.wav
+securimage/example_form.ajax.php
+securimage/example_form.php
+securimage/images/audio_icon.png
+securimage/images/refresh.png

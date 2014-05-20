@@ -12,8 +12,8 @@
 		})
 		.fail(function(data){
 		 	var result = $.parseJSON(data);
-			$(".modal-content").text(result.error);
-			$("#popup").modal('show'); 
+			$(".modal-content").text(result[0]);
+			$("#modal").modal('show'); 
 		})
 		.always(function () {
 			$("a.product").on("click", function (evt){
@@ -25,13 +25,13 @@
 						getProductsAsync();
 					else{
 						$(".modal-content").text(result.error);
-						$("#popup").modal('show');
+						$("#modal").modal('show');
 					}
 				})
 				.fail( function (data){
 					var result = $.parseJSON(data);
 					$(".modal-content").text(result.error);
-					$("#popup").modal('show');
+					$("#modal").modal('show');
 				});
 			});
 		});
@@ -43,10 +43,7 @@
 			window.location.href = "index.php";
 		});
 
-		$("a#cashOutLnk").on("click", function(evt){
-			//evt.preventDefault();
-			//alert("cashOutLnk");
-		});
+		
 
 		$("a#logoutLnk").on("click", function(evt){
 			evt.preventDefault();

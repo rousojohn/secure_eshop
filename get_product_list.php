@@ -19,7 +19,7 @@ if (isset($_GET['searchTerm'], $_SESSION['user_id'])){
 			$count = 0;
 			while($stmt->fetch()){
 				$count += $qty;
-				array_push($result,"<a href='#' class='list-group-item list-group-item-info product' product_id='" .htmlentities($product_id) . "'>" . htmlentities($desc) ." - | - ". htmlentities($price) . " &euro; <span class='badge'>" . htmlentities($qty) . "</span></a>");
+				array_push($result,"<a href='#' class='list-group-item list-group-item-info product' product_id='" .htmlentities($product_id) . "'>" . htmlentities($desc) ." - | - ". htmlentities($price) . " <span class='glyphicon glyphicon-euro'></span> <span class='badge'>" . htmlentities($qty) . "</span></a>");
 			}
 			array_push($result, $count);
 		}
