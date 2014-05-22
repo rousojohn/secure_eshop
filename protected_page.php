@@ -53,7 +53,9 @@
 	  </div><!-- /.container-fluid -->
 	</nav>
 <!--/* END OF NAVBAR */-->
-
+	<div class="well">
+		<p>Results for search of term: <span class="label label-default"></span></p>
+	</div>
 <!--/* PRODUCT LIST */ -->
 		<div class="list-group"></div>
 <div id="modal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">

@@ -1,7 +1,7 @@
 (function(){
 
 	var getProductsAsync = function(searchTerm){
-		$.get("get_product_list.php",{ searchTerm : searchTerm || "" })
+		$.get("get_product_list.php",{ searchTerm : $.trim(searchTerm) || "" })
 		 .done(function(data){
 			$("a.product").off("click");
 			$("div.list-group").empty();
@@ -16,6 +16,8 @@
 			$("#modal").modal('show'); 
 		})
 		.always(function () {
+			$("span.label-default").text(searchTerm);
+			$("input#searchTxt").val("");
 			$("a.product").on("click", function (evt){
 				evt.preventDefault();
 				$.post('add_to_cart_page.php',{ product_id : $(this).attr("product_id") })
@@ -55,6 +57,6 @@
 		});
 	});
 
-	$("div.list-group").ready(function(){getProductsAsync();});
+	$("div.list-group").ready(function(){getProductsAsync("");});
 
 })();
